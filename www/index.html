@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title></title>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+	<meta charset="utf-8">
+
+    <link rel="stylesheet" media="screen" href="css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" media="screen" href="css/iphone.css" type="text/css" />
+        
+	<script type="text/javascript" charset="utf-8" src="js/cordova-1.5.0.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+  </head>
+    <body>
+        <div class="container">
+            <header class="jumbotron subhead">
+                <h1>Cow(girl|boy) Up!</h1>
+                <p class="lead">Enter the person's information, take a picture and press Submit!</p>
+            </header>
+            <form>
+                <input type="text" name="first-name" placeholder="First Name" data-provide="typeahead">
+                <input type="text" name="last-name" placeholder="Last Name" data-provide="typeahead">
+                <input type="text" name="twitter-username" placeholder="Twitter Username" data-provide="typeahead">
+                <button class="btn btn-inverse" id="take-image">Take Picture</button>
+                <button type="submit" class="btn" id="submit">Submit</button>
+            </form>
+            <div id="show-image">
+                <img src="img/empty.gif" />
+                <button class="btn btn-success" id="use-image">Use</button>
+                <button class="btn btn-inverse" id="retake-image">Retake</button>
+            </div>
+        </div>
+    </body>
+</html>
