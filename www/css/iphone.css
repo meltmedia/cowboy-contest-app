@@ -1,21 +1,26 @@
-body {
-    padding-top: 5%;
+h1 {
+    text-align: center;
 }
 
-#show-image {
+form input, form select {
+    width: 96%;
+    padding: 8px 5px;
+}
+
+form button, form select {
+    width: 100%;
+}
+
+form #take-image {
+    margin-bottom: 6%;
+}
+
+#upload-image {
+    max-width: 100%;
+    border: 1px solid #000;
     display: none;
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    top: 0px;
-    left: 0px;
 }
 
-#show-image img {
-    height: 100%;
-    width: 100%;
-}
-
-#submit {
+.alert {
     display: none;
 }

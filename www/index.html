@@ -11,26 +11,43 @@
         
 	<script type="text/javascript" charset="utf-8" src="js/cordova-1.5.0.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery.validate.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
   </head>
     <body>
         <div class="container">
-            <header class="jumbotron subhead">
-                <h1>Cow(girl|boy) Up!</h1>
-                <p class="lead">Enter the person's information, take a picture and press Submit!</p>
-            </header>
-            <form>
-                <input type="text" name="first-name" placeholder="First Name" data-provide="typeahead">
-                <input type="text" name="last-name" placeholder="Last Name" data-provide="typeahead">
-                <input type="text" name="twitter-username" placeholder="Twitter Username" data-provide="typeahead">
-                <button class="btn btn-inverse" id="take-image">Take Picture</button>
-                <button type="submit" class="btn" id="submit">Submit</button>
+            <div class="navbar navbar-fixed-top">
+              <div class="navbar-inner">
+                <div class="container">
+                    <h1>Cow(girl|boy) Up!</h1>
+                </div>
+              </div>
+            </div>
+            <div class="alert alert-success" id="form-success">That's one fine lookin' cow(girl|boy)!</div>
+            <div class="alert alert-error" id="form-error">Something went wrong!</div>
+            <form class="well" id="cowboy-form"> 
+                <div class="control-group">
+                <input type="text" class="required" name="firstname" placeholder="First Name" data-provide="typeahead" autocorrect="off">
+                </div>
+                <div class="control-group">
+                <input type="text" class="required" name="lastname" placeholder="Last Name" data-provide="typeahead" autocorrect="off">
+                </div>
+                <div class="control-group">
+                <input type="text" class="required" name="twitterusername" placeholder="Twitter Username" data-provide="typeahead" autocorrect="off" autocapitalize="off">
+                </div>
+                <div class="control-group">
+                <select name="gender" class="required">
+                    <option value="">Gender</option>
+                    <option value="F">Female</option>
+                    <option value="M">Male</option>
+                </select>
+                </div>
+                <button class="btn btn-inverse btn-large" id="take-image">Take Picture</button>
+                <button type="submit" class="btn-success btn btn-large" id="submit" disabled="disabled">Submit</button>
             </form>
-            <div id="show-image">
-                <img src="img/empty.gif" />
-                <button class="btn btn-success" id="use-image">Use</button>
-                <button class="btn btn-inverse" id="retake-image">Retake</button>
+            <div class="well">
+                <img id="upload-image" src="img/empty.gif" />
             </div>
         </div>
     </body>
