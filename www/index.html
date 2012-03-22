@@ -12,7 +12,6 @@
 	<script type="text/javascript" charset="utf-8" src="js/cordova-1.5.0.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/jquery.validate.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
   </head>
     <body>
@@ -26,25 +25,37 @@
             </div>
             <div class="alert alert-success" id="form-success">That's one fine lookin' cow(girl|boy)!</div>
             <div class="alert alert-error" id="form-error">Something went wrong!</div>
-            <form class="well" id="cowboy-form"> 
+            <form class="well" id="cowboy-form">
+                
+                <button type="submit" id="hidden-submit">Submit</button>
+                
                 <div class="control-group">
-                <input type="text" class="required" name="firstname" placeholder="First Name" data-provide="typeahead" autocorrect="off">
+                    <button class="btn btn-inverse btn-large" id="take-image">Take Picture</button>
+                    <input type="hidden" class="required" value="" name="imageName">
                 </div>
+                
                 <div class="control-group">
-                <input type="text" class="required" name="lastname" placeholder="Last Name" data-provide="typeahead" autocorrect="off">
+                    <input type="text" class="required" value="" name="firstName" placeholder="First Name" autocorrect="off">
                 </div>
+                
                 <div class="control-group">
-                <input type="text" class="required" name="twitterusername" placeholder="Twitter Username" data-provide="typeahead" autocorrect="off" autocapitalize="off">
+                    <input type="text" class="required" value="" name="lastName" placeholder="Last Name" autocorrect="off">
                 </div>
+                
                 <div class="control-group">
-                <select name="gender" class="required">
-                    <option value="">Gender</option>
-                    <option value="F">Female</option>
-                    <option value="M">Male</option>
-                </select>
+                    <input type="text" class="required" value="" name="twitter" placeholder="Twitter Username" autocorrect="off" autocapitalize="off">
                 </div>
-                <button class="btn btn-inverse btn-large" id="take-image">Take Picture</button>
-                <button type="submit" class="btn-success btn btn-large" id="submit" disabled="disabled">Submit</button>
+                
+                <div class="control-group">
+                    <select name="gender" class="required">
+                        <option value="" selected="selected">Gender</option>
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="btn-success btn btn-large" id="submit">Submit</button>
+                <button class="btn-danger btn btn-large" id="form-reset">Reset</button>
             </form>
             <div class="well">
                 <img id="upload-image" src="img/empty.gif" />

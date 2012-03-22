@@ -11,8 +11,12 @@ form button, form select {
     width: 100%;
 }
 
-form #take-image {
+form #submit {
     margin-bottom: 6%;
+}
+
+form #take-image {
+    margin-bottom: 4%;
 }
 
 #upload-image {
@@ -21,6 +25,19 @@ form #take-image {
     display: none;
 }
 
+.error button {
+    border: 1px solid #b94a48;
+}
+
 .alert {
     display: none;
+}
+
+#hidden-submit {
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+    padding: 0px;
+    margin: 0px;
+    display: block;
 }
