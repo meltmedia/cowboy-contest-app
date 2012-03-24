@@ -33,7 +33,6 @@
     document.addEventListener("deviceready",onDeviceReady,false);
 
     var $submit, $uploadImage, $success, $error, $messages, $form, $imageName,
-        validator,
         serverPath = 'http://lkarrys.local:3051/add-entry',
         token = {token: 'ZzP5jJSWknXiZ88Wl5gXJcRdK7KBWE'};
 
@@ -61,7 +60,7 @@
             );
         });
         
-        validator = $form.validate({
+        $form.validate({
             ignore: '',
             submitHandler: formSubmit,
             highlight: function(element, errorClass, validClass) {
@@ -81,7 +80,7 @@
         
         $('#form-reset').click(function(e) {
             e.preventDefault();
-            $form.find('input').each(function() {
+            $form.find('input, select').each(function() {
                 $(this).val('');
             });
             $uploadImage.hide().attr('src', 'img/empty.gif');
