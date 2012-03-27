@@ -73,8 +73,7 @@
                 imageName: 'A picture is required.',
                 firstName: 'First name is required.',
                 lastName: 'Last name is required.',
-                twitter: 'Twitter is required.',
-                gender: 'Gender is required.'
+                twitter: 'Twitter is required.'
             }
         });
         
