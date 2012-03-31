@@ -33,7 +33,7 @@
     document.addEventListener("deviceready",onDeviceReady,false);
 
     var $submit, $uploadImage, $success, $error, $messages, $form, $imageName,
-        serverPath = 'http://lkarrys.local:3051/add-entry',
+        serverPath = 'http://notconf-contest.nodejitsu.com:80/add-entry',
         token = {token: 'ZzP5jJSWknXiZ88Wl5gXJcRdK7KBWE'};
 
     // PhoneGap is ready to be used!
