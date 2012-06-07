@@ -4,7 +4,7 @@
     /*!
      * jQuery serializeObject - v0.2 - 1/20/2010
      * http://benalman.com/projects/jquery-misc-plugins/
-     * 
+     *
      * Copyright (c) 2010 "Cowboy" Ben Alman
      * Dual licensed under the MIT and GPL licenses.
      * http://benalman.com/about/license/
@@ -28,13 +28,9 @@
         return obj;
     };
 
-
-    // Wait for PhoneGap to connect with the device
-    document.addEventListener("deviceready",onDeviceReady,false);
-
     var $submit, $uploadImage, $success, $error, $messages, $form, $imageName,
-        serverPath = 'http://notconf-contest.nodejitsu.com:80/add-entry',
-        token = {token: 'ZzP5jJSWknXiZ88Wl5gXJcRdK7KBWE'};
+        serverPath = 'http://path-to-upload',
+        token = {token: 'XXXXXX'}; // Token is authenticated against a Controllers mongodb table
 
     // PhoneGap is ready to be used!
     function onDeviceReady() {
@@ -53,7 +49,7 @@
                 onSuccess,
                 $.noop,
                 {
-                    quality: 50, 
+                    quality: 50,
                     destinationType: Camera.DestinationType.FILE_URI,
                     encodingType: Camera.EncodingType.JPEG
                 }
@@ -136,5 +132,8 @@
         $error.text(message).show();
         $('html, body').scrollTop(0);
     }
+
+    // Wait for PhoneGap to connect with the device
+    document.addEventListener("deviceready",onDeviceReady,false);
 
 })(jQuery);
