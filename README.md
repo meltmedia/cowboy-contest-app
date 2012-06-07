@@ -1,8 +1,12 @@
 # Cowboy Costume Contest App
 
-A PhoneGap (Cordova 1.5) application that takes a picture of a person along with some validated form fields, and uploads the data to a server. This is the companion app to [Cowboy Contest Site](https://github.com/meltmedia/cowboy-contest-site) which accepts the form data and adds an entry to be voted on through Twitter.
+An iPhone only (for now) PhoneGap (Cordova 1.5) application that takes a picture of a person along with some validated form fields, and uploads the data to a server. This is the companion app to [Cowboy Contest Site](https://github.com/meltmedia/cowboy-contest-site) which accepts the form data and adds an entry to be voted on through Twitter.
 
+## Setup Instructions
 
+1. `git clone git@github.com:meltmedia/cowboy-contest-app.git`
+2. Follow [PhoneGap iOS installation instructions](http://docs.phonegap.com/en/1.5.0/guide_getting-started_ios_index.md.html#Getting%20Started%20with%20iOS)
+3. Open `cowboy-contest.xcodeproj` in Xcode (tested with 4.3.2)
 
 ### License MIT
 Copyright (c) 2012 meltmedia
